@@ -194,6 +194,8 @@ function App() {
                   <h3 className="text-2xl font-bold text-white mb-2">Lumecca I</h3>
                   <p className="text-xs text-gray-500 uppercase tracking-wider">Treatment Focus</p>
                   <p className="text-sm text-gray-300 mt-1">Demodex & Inflammation</p>
+                  <p className="text-sm text-gray-300">Meibomian Gland Dysfunction</p>
+                  <p className="text-sm text-gray-300">Rosacea</p>
                 </div>
               </div>
             </div>
@@ -216,6 +218,8 @@ function App() {
                   <h3 className="text-2xl font-bold text-white mb-2">Morpheus8</h3>
                   <p className="text-xs text-gray-500 uppercase tracking-wider">Treatment Focus</p>
                   <p className="text-sm text-gray-300 mt-1">Collagen Stimulation</p>
+                  <p className="text-sm text-gray-300">Dermatochalasis</p>
+                  <p className="text-sm text-gray-300">Skin Tightening</p>
                 </div>
               </div>
             </div>
@@ -357,10 +361,6 @@ function App() {
               <div className="rounded-2xl border border-gray-700 overflow-hidden shadow-2xl shadow-blue-500/10">
                 <img src="/images/chat-interface.png" alt="AI Chat Interface" className="w-full h-auto" />
               </div>
-              <div className="mt-4 flex items-center justify-center gap-2 text-sm text-gray-500">
-                <Shield className="w-4 h-4" />
-                <span>Powered by Dr. Dornn's clinical expertise and 15+ treatment protocols</span>
-              </div>
             </div>
 
             {/* Right side - Content */}
@@ -500,9 +500,6 @@ function App() {
               <div className="rounded-2xl border border-gray-700 overflow-hidden shadow-2xl shadow-cyan-500/10">
                 <img src="/images/Tx-Calculator.png" alt="Treatment Calculator" className="w-full h-auto" />
               </div>
-              <p className="mt-4 text-sm text-gray-500 text-center">
-                Settings based on Dr. Dornn's proven treatment protocols used across 100+ practices
-              </p>
             </div>
           </div>
         </div>
@@ -517,9 +514,6 @@ function App() {
               <div className="rounded-2xl border border-gray-700 overflow-hidden shadow-2xl shadow-blue-500/10">
                 <img src="/images/resource-library.png" alt="Resource Library" className="w-full h-auto" />
               </div>
-              <p className="mt-4 text-sm text-gray-500 text-center">
-                All your clinical documents organized and searchable in one place
-              </p>
             </div>
 
             {/* Right side - Content */}
@@ -537,7 +531,7 @@ function App() {
               </h2>
 
               <p className="text-xl text-gray-400 mb-8">
-                Stop digging through folders and emails. Access consent forms, clinical protocols, case studies, and training materials all in one searchable library.
+                Stop digging through folders and emails. Access video demonstrations, consent forms, case studies, and training materials all in one searchable library.
               </p>
 
               <div className="space-y-4">
@@ -545,13 +539,13 @@ function App() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
                     "Patient consent forms",
-                    "Pre & post-treatment checklists",
-                    "Clinical protocol PDFs",
-                    "Device operation guides",
-                    "Staff training materials",
-                    "Patient education handouts",
+                    "Contraindications checklists",
+                    "Full treatment video tutorials",
+                    "Device operation manual",
+                    "Case study references",
+                    "Clinical supplies list",
                     "Consultation frameworks",
-                    "Case study references"
+                    "Access to Dr. Dornn's Masterclass"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 hover:border-blue-500/50 transition-colors">
                       <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
