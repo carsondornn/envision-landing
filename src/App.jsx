@@ -4,7 +4,7 @@ import {
   FileText, Mic, BookOpen, Shield, Check, Zap,
   Lightbulb, X, Sparkles, Star, Users,
   ChevronDown, ArrowRight, AlertTriangle, Thermometer,
-  Target, Activity
+  Target, Activity, ClipboardCopy, History
 } from 'lucide-react'
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
     },
     {
       question: "How accurate is the AI?",
-      answer: "Envision AI achieves 97% accuracy on clinical questions based on our testing. All information is sourced directly from verified clinical protocols and Dr. Dornn's treatment documentation. The AI will tell you when it doesn't have enough information to answer confidently."
+      answer: "Envision AI achieves 97% accuracy on clinical questions based on our testing. All information is sourced directly from Inmode & Dr. Dornn verified clinical protocols. The AI will tell you when it doesn't have enough information to answer confidently."
     },
     {
       question: "What InMode devices does it support?",
@@ -56,10 +56,9 @@ function App() {
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-gray-400 hover:text-white transition">Features</a>
-            <a href="#how-it-works" className="text-gray-400 hover:text-white transition">How It Works</a>
-            <a href="#pricing" className="text-gray-400 hover:text-white transition">Pricing</a>
+            <a href="#who-its-for" className="text-gray-400 hover:text-white transition">Who's This For?</a>
             <a href="#" className="bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium hover:opacity-90 transition">
-              Get Started
+              Watch Demo
             </a>
           </div>
 
@@ -75,10 +74,9 @@ function App() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-gray-900 border-t border-gray-800 px-6 py-4 space-y-4">
             <a href="#features" className="block text-gray-400 hover:text-white">Features</a>
-            <a href="#how-it-works" className="block text-gray-400 hover:text-white">How It Works</a>
-            <a href="#pricing" className="block text-gray-400 hover:text-white">Pricing</a>
+            <a href="#who-its-for" className="block text-gray-400 hover:text-white">Who's This For?</a>
             <a href="#" className="block bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium text-center">
-              Get Started
+              Watch Demo
             </a>
           </div>
         )}
@@ -91,7 +89,7 @@ function App() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-              <span className="text-sm text-gray-300">Trusted by 100+ Eye Care Professionals</span>
+              <span className="text-sm text-gray-300">Trusted by Eye Care Professionals Worldwide</span>
             </div>
 
             {/* Blinking Eye */}
@@ -108,7 +106,7 @@ function App() {
             </h1>
 
             <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-              The clinical knowledge of a dry eye specialist, available 24/7. Protocols, settings, contraindications, and consultation frameworks — all in one AI-powered platform.
+              The clinical knowledge of a dry eye specialist, available 24/7. Treatment protocols, device settings, contraindications, and consultation frameworks — all in one AI-powered platform.
             </p>
 
             <div className="flex items-center justify-center">
@@ -570,7 +568,7 @@ function App() {
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Powerful features designed specifically for eye care professionals using InMode devices
+              Powerful features designed specifically for eye care professionals using InMode's Envision device.
             </p>
           </div>
 
@@ -579,13 +577,14 @@ function App() {
             {/* Center Hub */}
             <div className="flex justify-center mb-12 lg:mb-0 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-10">
               <div className="relative">
-                {/* Glowing rings */}
-                <div className="absolute inset-0 w-40 h-40 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-xl animate-pulse"></div>
-                <div className="absolute -inset-4 w-48 h-48 rounded-full border border-blue-500/20"></div>
-                <div className="absolute -inset-8 w-56 h-56 rounded-full border border-cyan-500/10"></div>
+                {/* Glowing rings - enhanced pulsation */}
+                <div className="absolute inset-0 w-40 h-40 rounded-full bg-gradient-to-r from-blue-500/30 to-cyan-500/30 blur-xl hub-pulse"></div>
+                <div className="absolute -inset-4 w-48 h-48 rounded-full border border-blue-500/30 hub-ring-1"></div>
+                <div className="absolute -inset-8 w-56 h-56 rounded-full border border-cyan-500/20 hub-ring-2"></div>
+                <div className="absolute -inset-12 w-64 h-64 rounded-full border border-blue-500/10 hub-ring-3"></div>
 
                 {/* Center content */}
-                <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-500/50 flex flex-col items-center justify-center">
+                <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-2 border-blue-500/50 flex flex-col items-center justify-center hub-center">
                   <Eye className="w-10 h-10 text-blue-400 mb-2" />
                   <span className="text-sm font-bold text-white">Envision AI</span>
                   <span className="text-xs text-gray-500">Platform</span>
@@ -634,7 +633,7 @@ function App() {
                   <div>
                     <h3 className="text-lg font-bold mb-2">Video Demonstrations</h3>
                     <p className="text-gray-500 text-sm">
-                      Watch expert treatment videos for all InMode procedures.
+                      Watch expert treatment videos for all Envision handpieces.
                     </p>
                   </div>
                 </div>
@@ -652,7 +651,7 @@ function App() {
                   <div>
                     <h3 className="text-lg font-bold mb-2">Resource Library</h3>
                     <p className="text-gray-500 text-sm">
-                      Consent forms, protocols, and case studies in one place.
+                      Consent forms, documents, and case studies in one place.
                     </p>
                   </div>
                 </div>
@@ -667,7 +666,7 @@ function App() {
                   <div>
                     <h3 className="text-lg font-bold mb-2">Voice Input</h3>
                     <p className="text-gray-500 text-sm">
-                      Ask questions hands-free while treating patients.
+                      Ask questions hands-free.
                     </p>
                   </div>
                 </div>
@@ -687,125 +686,36 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* SECTION D: What's Inside - Knowledge Base Preview */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Built on{' '}
-              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                Real Clinical Expertise
-              </span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Envision AI isn't just another chatbot. It's powered by comprehensive dry eye treatment documentation developed by leading specialists.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 - Treatment Protocols */}
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
-                <FileText className="w-7 h-7 text-blue-500" />
+              {/* Feature 7 - EMR-Ready Settings */}
+              <div className="group lg:text-right lg:pr-8">
+                <div className="flex items-start gap-4 lg:flex-row-reverse">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500/20 to-blue-600/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-blue-500/30 transition-all duration-300">
+                    <ClipboardCopy className="w-7 h-7 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2">EMR-Ready Settings</h3>
+                    <p className="text-gray-500 text-sm">
+                      Copy and paste treatment settings directly into your EMR.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Treatment Protocols</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Forma I RF Treatment Technique</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Lumecca I IPL Protocols</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Morpheus8 Aesthetics Guide</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Demodex & Blepharitis Treatment</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Chalazion Management</span>
-                </li>
-              </ul>
-            </div>
 
-            {/* Card 2 - Safety & Preparation */}
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-7 h-7 text-cyan-500" />
+              {/* Feature 8 - Conversation History */}
+              <div className="group lg:text-left lg:pl-8 lg:col-start-3">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-500/20 to-cyan-600/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-cyan-500/30 transition-all duration-300">
+                    <History className="w-7 h-7 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2">Conversation History</h3>
+                    <p className="text-gray-500 text-sm">
+                      All your queries saved for future reference.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Safety & Preparation</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <span>Patient Preparation Checklists</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <span>Contraindications by Device</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <span>Fitzpatrick Skin Type Guidelines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <span>Post-Treatment Care Protocols</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                  <span>Complication Management</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Card 3 - Practice Growth */}
-            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
-              <div className="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
-                <Lightbulb className="w-7 h-7 text-blue-500" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Practice Growth</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Patient Consultation Frameworks</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Pricing & ROI Strategies</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Staff Training Guidelines</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Diagnostic Testing Protocols</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                  <span>Scaling Your Dry Eye Practice</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom badges */}
-          <div className="mt-12 text-center">
-            <p className="text-sm text-gray-500 mb-4">Featuring protocols from:</p>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400">
-              <span className="bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-full text-sm">Dr. Dornn's Dry Eye Masterclass</span>
-              <span className="bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-full text-sm">InMode Clinical Documentation</span>
-              <span className="bg-gray-800/50 border border-gray-700 px-4 py-2 rounded-full text-sm">Peer-Reviewed Research</span>
             </div>
           </div>
         </div>
@@ -860,6 +770,51 @@ function App() {
             transform: translateY(-10px);
           }
         }
+        @keyframes hubPulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.3;
+          }
+          50% {
+            transform: scale(1.3);
+            opacity: 0.7;
+          }
+        }
+        @keyframes hubRingPulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.3;
+          }
+          50% {
+            transform: scale(1.15);
+            opacity: 0.6;
+          }
+        }
+        @keyframes hubCenterPulse {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(34, 211, 238, 0.1);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 80px rgba(34, 211, 238, 0.3);
+          }
+        }
+        .hub-pulse {
+          animation: hubPulse 2s ease-in-out infinite;
+        }
+        .hub-ring-1 {
+          animation: hubRingPulse 2s ease-in-out infinite;
+        }
+        .hub-ring-2 {
+          animation: hubRingPulse 2s ease-in-out infinite;
+          animation-delay: 0.3s;
+        }
+        .hub-ring-3 {
+          animation: hubRingPulse 2s ease-in-out infinite;
+          animation-delay: 0.6s;
+        }
+        .hub-center {
+          animation: hubCenterPulse 2s ease-in-out infinite;
+        }
         .floating-card-1 {
           animation: float 4s ease-in-out infinite;
         }
@@ -886,7 +841,7 @@ function App() {
       `}</style>
 
       {/* SECTION E: Who It's For - Timeline Style */}
-      <section className="py-24 px-6">
+      <section id="who-its-for" className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -1066,11 +1021,12 @@ function App() {
               Ready to Transform Your Practice?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-              Join hundreds of eye care professionals using Envision AI to deliver better dry eye treatments.
+              See how Envision AI can help you deliver better dry eye treatments with confidence.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition">
-                Start Your Free Trial
+              <a href="#" className="w-full sm:w-auto border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
+                <Play className="w-5 h-5 fill-current" />
+                Watch Demo
               </a>
               <a href="#" className="w-full sm:w-auto text-gray-400 hover:text-white transition">
                 Contact Sales →
