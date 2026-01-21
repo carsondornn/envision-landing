@@ -112,7 +112,7 @@ function App() {
             </p>
 
             <div className="flex items-center justify-center">
-              <a href="#" className="border border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition flex items-center justify-center gap-2">
+              <a href="#" className="border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
                 <Play className="w-5 h-5 fill-current" />
                 Watch Demo
               </a>
@@ -225,65 +225,124 @@ function App() {
         </div>
       </section>
 
-      {/* SECTION A: The Problem Section */}
-      <section className="py-24 px-6">
+      {/* SECTION A: The Problem Section - Floating Problem Cards */}
+      <section className="py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left side - Heading */}
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          {/* Main content area with floating cards */}
+          <div className="relative min-h-[600px] flex items-center justify-center">
+
+            {/* Floating problem cards - positioned around the center */}
+            {/* Card 1 - Top Left */}
+            <div className="absolute top-0 left-0 lg:left-[5%] floating-card-1">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-red-500/20 rounded-xl p-4 max-w-[240px] hover:border-red-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-4 h-4 text-red-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">200-page manuals</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Flipping through docs mid-treatment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 - Top Right */}
+            <div className="absolute top-8 right-0 lg:right-[5%] floating-card-2">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-orange-500/20 rounded-xl p-4 max-w-[240px] hover:border-orange-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MessageCircle className="w-4 h-4 text-orange-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">On hold with support</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Waiting for simple answers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 - Middle Left */}
+            <div className="absolute top-1/3 left-0 lg:left-[2%] floating-card-3">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-4 max-w-[240px] hover:border-yellow-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <AlertTriangle className="w-4 h-4 text-yellow-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Guessing settings</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Uncertain about skin types</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 - Middle Right */}
+            <div className="absolute top-1/2 right-0 lg:right-[3%] floating-card-4">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-red-500/20 rounded-xl p-4 max-w-[240px] hover:border-red-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-red-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Inconsistent protocols</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Staff doing things differently</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5 - Bottom Left */}
+            <div className="absolute bottom-16 left-0 lg:left-[8%] floating-card-5">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-orange-500/20 rounded-xl p-4 max-w-[240px] hover:border-orange-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-4 h-4 text-orange-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Months to train staff</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Slow onboarding process</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 6 - Bottom Right */}
+            <div className="absolute bottom-8 right-0 lg:right-[10%] floating-card-6">
+              <div className="group bg-gray-900/90 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-4 max-w-[240px] hover:border-yellow-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Target className="w-4 h-4 text-yellow-400" />
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Missed contraindications</p>
+                    <p className="text-gray-500 text-xs mt-1 group-hover:text-gray-400 transition-colors">Forgetting during consults</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Center content */}
+            <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                 Managing Dry Eye Treatments{' '}
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                   Shouldn't Be This Hard
                 </span>
               </h2>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-gray-400 mb-8">
                 You invested in premium InMode technology. But without instant access to expert protocols, you're leaving treatment quality and revenue on the table.
               </p>
-            </div>
 
-            {/* Right side - Pain points */}
-            <div className="space-y-4">
-              {[
-                "Flipping through 200-page manuals mid-treatment to find the right settings",
-                "Calling InMode support and waiting on hold for simple protocol questions",
-                "Second-guessing joule settings for different Fitzpatrick skin types",
-                "Forgetting contraindications during patient consultations",
-                "Inconsistent treatment protocols across your clinical staff",
-                "New staff taking months to get up to speed on device operation"
-              ].map((pain, index) => (
-                <div key={index} className="flex items-start gap-4 bg-gray-900/50 border border-gray-800 rounded-xl p-4 hover:border-red-500/30 transition-colors">
-                  <div className="flex-shrink-0 w-6 h-6 bg-red-500/10 rounded-full flex items-center justify-center mt-0.5">
-                    <X className="w-4 h-4 text-red-500" />
-                  </div>
-                  <p className="text-gray-300">{pain}</p>
+              {/* Solution hint */}
+              <div className="relative inline-flex group cursor-pointer">
+                {/* Glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="relative inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full px-8 py-4 text-lg font-semibold">
+                  <Zap className="w-6 h-6 text-white" />
+                  <span className="text-white">Envision AI solves all of this</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* With Envision AI Callout */}
-          <div className="mt-16 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-green-500/30 rounded-2xl p-8 lg:p-10">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-500/10 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-green-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white">With Envision AI</h3>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {[
-                "Instant answers to any clinical question",
-                "Precise settings calculated in seconds",
-                "Complete protocol library at your fingertips",
-                "Train staff 10x faster"
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 bg-green-500/10 rounded-full flex items-center justify-center mt-0.5">
-                    <Check className="w-3 h-3 text-green-500" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
@@ -798,6 +857,37 @@ function App() {
             transparent 360deg
           );
           animation: rotate 4s linear infinite;
+        }
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        .floating-card-1 {
+          animation: float 4s ease-in-out infinite;
+        }
+        .floating-card-2 {
+          animation: float 4.5s ease-in-out infinite;
+          animation-delay: 0.5s;
+        }
+        .floating-card-3 {
+          animation: float 5s ease-in-out infinite;
+          animation-delay: 1s;
+        }
+        .floating-card-4 {
+          animation: float 4.2s ease-in-out infinite;
+          animation-delay: 1.5s;
+        }
+        .floating-card-5 {
+          animation: float 4.8s ease-in-out infinite;
+          animation-delay: 2s;
+        }
+        .floating-card-6 {
+          animation: float 4.3s ease-in-out infinite;
+          animation-delay: 0.8s;
         }
       `}</style>
 
