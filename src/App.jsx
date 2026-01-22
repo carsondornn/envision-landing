@@ -232,11 +232,11 @@ function App() {
       <section className="py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Main content area with floating cards */}
-          <div className="relative min-h-[600px] flex items-center justify-center">
+          <div className="relative min-h-[auto] lg:min-h-[600px] flex items-center justify-center">
 
             {/* Floating problem cards - positioned around the center */}
             {/* Card 1 - Top Left */}
-            <div className="absolute top-0 left-0 lg:left-[5%] floating-card-1">
+            <div className="hidden lg:block absolute top-0 left-0 lg:left-[5%] floating-card-1">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-red-500/20 rounded-xl p-4 max-w-[240px] hover:border-red-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -251,7 +251,7 @@ function App() {
             </div>
 
             {/* Card 2 - Top Right */}
-            <div className="absolute top-8 right-0 lg:right-[5%] floating-card-2">
+            <div className="hidden lg:block absolute top-8 right-0 lg:right-[5%] floating-card-2">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-orange-500/20 rounded-xl p-4 max-w-[240px] hover:border-orange-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -266,7 +266,7 @@ function App() {
             </div>
 
             {/* Card 3 - Middle Left */}
-            <div className="absolute top-1/3 left-0 lg:left-[2%] floating-card-3">
+            <div className="hidden lg:block absolute top-1/3 left-0 lg:left-[2%] floating-card-3">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-4 max-w-[240px] hover:border-yellow-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -281,7 +281,7 @@ function App() {
             </div>
 
             {/* Card 4 - Middle Right */}
-            <div className="absolute top-1/2 right-0 lg:right-[3%] floating-card-4">
+            <div className="hidden lg:block absolute top-1/2 right-0 lg:right-[3%] floating-card-4">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-red-500/20 rounded-xl p-4 max-w-[240px] hover:border-red-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -296,7 +296,7 @@ function App() {
             </div>
 
             {/* Card 5 - Bottom Left */}
-            <div className="absolute bottom-16 left-0 lg:left-[8%] floating-card-5">
+            <div className="hidden lg:block absolute bottom-16 left-0 lg:left-[8%] floating-card-5">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-orange-500/20 rounded-xl p-4 max-w-[240px] hover:border-orange-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -311,7 +311,7 @@ function App() {
             </div>
 
             {/* Card 6 - Bottom Right */}
-            <div className="absolute bottom-8 right-0 lg:right-[10%] floating-card-6">
+            <div className="hidden lg:block absolute bottom-8 right-0 lg:right-[10%] floating-card-6">
               <div className="group bg-gray-900/90 backdrop-blur-sm border border-yellow-500/20 rounded-xl p-4 max-w-[240px] hover:border-yellow-500/40 hover:bg-gray-800/90 transition-all duration-300 cursor-pointer">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
