@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Eye, Menu, Play, MessageCircle, Calculator, Video,
   FileText, Mic, BookOpen, Shield, Check, Zap,
@@ -57,9 +58,9 @@ function App() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-gray-400 hover:text-white transition">Features</a>
             <a href="#who-its-for" className="text-gray-400 hover:text-white transition">Who's This For?</a>
-            <a href="#" className="bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium hover:opacity-90 transition">
+            <Link to="/demo" className="bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium hover:opacity-90 transition">
               Watch Demo
-            </a>
+            </Link>
           </div>
 
           <button
@@ -75,9 +76,9 @@ function App() {
           <div className="md:hidden bg-gray-900 border-t border-gray-800 px-6 py-4 space-y-4">
             <a href="#features" className="block text-gray-400 hover:text-white">Features</a>
             <a href="#who-its-for" className="block text-gray-400 hover:text-white">Who's This For?</a>
-            <a href="#" className="block bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium text-center">
+            <Link to="/demo" className="block bg-gradient-to-r from-blue-600 to-cyan-500 px-5 py-2 rounded-lg font-medium text-center">
               Watch Demo
-            </a>
+            </Link>
           </div>
         )}
       </nav>
@@ -110,10 +111,10 @@ function App() {
             </p>
 
             <div className="flex items-center justify-center">
-              <a href="#" className="border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
+              <Link to="/demo" className="border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
                 <Play className="w-5 h-5 fill-current" />
                 Watch Demo
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -1024,10 +1025,10 @@ function App() {
               See how Envision AI can help you deliver better dry eye treatments with confidence.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#" className="w-full sm:w-auto border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
+              <Link to="/demo" className="w-full sm:w-auto border-2 border-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-500 hover:text-green-500 transition flex items-center justify-center gap-2">
                 <Play className="w-5 h-5 fill-current" />
                 Watch Demo
-              </a>
+              </Link>
               <a href="#" className="w-full sm:w-auto text-gray-400 hover:text-white transition">
                 Contact Sales →
               </a>
