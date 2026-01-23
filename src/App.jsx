@@ -1029,7 +1029,7 @@ function App() {
                 <Play className="w-5 h-5 fill-current" />
                 Watch Demo
               </Link>
-              <a href="#" className="w-full sm:w-auto text-gray-400 hover:text-white transition">
+              <a href="mailto:admin@askenvisionai.com" className="w-full sm:w-auto text-gray-400 hover:text-white transition">
                 Contact Sales →
               </a>
             </div>
