@@ -32,47 +32,36 @@ function DemoPage() {
               See Envision AI in Action
             </h1>
             <p className="text-gray-400 text-lg">
-              Watch how Envision AI transforms dry eye treatment workflows
+              Watch how Envision AI transforms dry eye education & support
             </p>
           </div>
 
           {/* Video Container */}
           <div className="relative aspect-video bg-gray-900 rounded-2xl border border-gray-700 overflow-hidden shadow-2xl shadow-blue-500/10">
-            {/* Placeholder - Replace with actual video embed */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-105 transition-transform">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500">Demo video coming soon</p>
-              </div>
-            </div>
-
-            {/* Uncomment and replace VIDEO_ID when you have a video */}
-            {/* <iframe
+            <video
               className="w-full h-full"
-              src="https://www.youtube.com/embed/VIDEO_ID"
-              title="Envision AI Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe> */}
+              controls
+              playsInline
+              poster=""
+            >
+              <source src="/BEST-DEMO.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
-          {/* Optional: Additional info below video */}
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 mb-6">
-              Ready to transform your practice?
+          {/* Contact Info */}
+          <div className="mt-10 text-center">
+            <p className="text-gray-400">
+              For any questions, please contact{' '}
+              <a
+                href="mailto:Admin@AskEnvisionAI.com"
+                className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-semibold hover:from-blue-300 hover:to-cyan-300 transition-all"
+              >
+                Admin@AskEnvisionAI.com
+              </a>
             </p>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition"
-            >
-              Get Started
-            </Link>
           </div>
+
         </div>
       </main>
     </div>
