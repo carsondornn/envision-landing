@@ -44,7 +44,7 @@ function DemoPage() {
               playsInline
               poster=""
             >
-              <source src="/BEST-DEMO.mp4" type="video/mp4" />
+              <source src="/FINAL-DEMO.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
