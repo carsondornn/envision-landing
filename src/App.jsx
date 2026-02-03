@@ -83,9 +83,25 @@ function App() {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      {/* Hero + Devices Wrapper with Video Background */}
+      <div className="relative overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30"
+          >
+            <source src="/ENVISION-ANIMATED.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-950/70 via-gray-950/30 to-gray-950"></div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-6 relative z-10">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gray-800/50 border border-gray-700 rounded-full px-4 py-2 mb-8">
@@ -118,26 +134,12 @@ function App() {
             </div>
           </div>
 
-          {/* Hero Image/Mockup */}
-          <div className="mt-16 relative max-h-[500px] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/80 to-transparent z-10 pointer-events-none h-full"></div>
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 p-2 shadow-2xl shadow-blue-500/10">
-              <img
-                src="/images/app-preview.png"
-                alt="Envision AI Interface"
-                className="rounded-xl w-full object-cover object-top"
-              />
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Devices Section */}
-      <section className="py-20 border-y border-gray-800 bg-gradient-to-b from-gray-900/30 to-transparent relative overflow-hidden">
-        {/* Background accent */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent"></div>
-
-        <div className="max-w-7xl mx-auto px-6 relative">
+        {/* Devices Section */}
+        <section className="py-20 relative z-10">
+          <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-sm text-blue-400 font-semibold mb-2 tracking-wide">POWERED BY INMODE</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -225,8 +227,9 @@ function App() {
             </div>
           </div>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
 
       {/* SECTION A: The Problem Section - Floating Problem Cards */}
       <section className="py-24 px-6 overflow-hidden">
